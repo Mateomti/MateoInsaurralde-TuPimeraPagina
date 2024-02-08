@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado de productos</title>
+</head>
+<body>
+    <nav>
+        <a href="{% url "inicio" %}">Inicio</a>
+        <a href="{% url "registro" %}">Registrar Producto</a>
+    </nav>
+    <h2>Listado de productos registrados</h2>
+    {% for prod in lista%}
+        <li>
+            {{prod}}
+        </li>
+    {% endfor %}
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de productos</title>
+</head>
+<body>
+    <nav>
+        <a href="{% url "inicio" %}">Inicio</a>
+        <a href="{% url "listado" %}">Listado de productos</a>
+
+    </nav>
+    <h2>Registro de productos</h2>
+    <form action="{% url "registro" %}" method='POST'>
+        {% csrf_token %}
+
+        <table>
+            {{formulario}}
+        </table>
+        <input type="submit", value='Registrar'>
+
+    </form>
+
+</body>
+</html>
